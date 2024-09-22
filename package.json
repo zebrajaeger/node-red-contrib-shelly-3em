@@ -1,6 +1,6 @@
 {
   "name": "@zebrajaeger/node-red-contrib-shelly-3em",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adapter for Shelly 3EM webinterface",
   "keywords": [
     "node-red",
@@ -12,7 +12,7 @@
   "node-red": {
     "version": ">=2.0.0",
     "nodes": {
-      "3EM": "nodes/3em.js"
+      "Shelly_3EM": "nodes/3em.js"
     }
   },
   "engines": {
