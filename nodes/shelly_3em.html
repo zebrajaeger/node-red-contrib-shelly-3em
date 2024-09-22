@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    RED.nodes.registerType('Shelly_3EM', {
+        category: 'Shelly',
+        color: '#ffffff',
+        defaults: {
+            name: { value: "Shelly 3EM" },
+            url: { value: "http://my.shelly.device/status", required:true },
+            intervalMs: { value: 1000, required: true, validate: function(v) { return !isNaN(v) && v > 0; } }, 
+        },
+        inputs: 0,
+        outputs: 1,
+        icon: 'SHELLY_3EM_01_30x30.png',
+        label: function() {
+            return this.name || "Shelly 3EM";
+        }
+    });
+</script> 
+  
+<script type="text/x-red" data-template-name="Shelly_3EM">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name of Node">
+    </div>
+    <div class="form-row">
+        <label for="node-input-url"><i class="fa fa-tag"></i> Url</label>
+        <input type="text" id="node-input-url" placeholder="Status-Url of Shelly 3EM">
+    </div>
+    <div class="form-row">
+        <label for="node-input-intervalMs"><i class="fa fa-clock-o"></i> Interval (ms)</label>
+        <input type="number" id="node-input-intervalMs" placeholder="Intervall in Milliseconds">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="Shelly_3EM">
+    <p>Connector to read values from Shelly 3EM device</p>
+</script>
