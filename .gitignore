@@ -7,3 +7,4 @@ flows_cred.json
 settings.js
 *.tgz
 *.backup
+*.csv

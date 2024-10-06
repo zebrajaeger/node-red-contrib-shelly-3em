@@ -4,18 +4,19 @@
         color: '#ffffff',
         defaults: {
             name: { value: "Shelly 3EM" },
-            url: { value: "http://my.shelly.device/status", required:true },
-            intervalMs: { value: 1000, required: true, validate: function(v) { return !isNaN(v) && v > 0; } }, 
+            url: { value: "http://my.shelly.device/status", required: true },
+            intervalMs: { value: 1000, required: true, validate: function (v) { return !isNaN(v) && v > 0; } },
         },
         inputs: 0,
-        outputs: 1,
+        outputs: 4,
+        outputLabels: ["Continuous", "Day value on day change", "Hour value on hour change", "minute vcalue on minute change"],
         icon: 'SHELLY_3EM_01_30x30.png',
-        label: function() {
+        label: function () {
             return this.name || "Shelly 3EM";
         }
     });
-</script> 
-  
+</script>
+
 <script type="text/x-red" data-template-name="Shelly_3EM">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>

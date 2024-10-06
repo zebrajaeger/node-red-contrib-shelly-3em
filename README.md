@@ -1,13 +1,25 @@
-# Shelly 3EM 
+# Shelly 3EM
 
 - Receives the status data via http.
 - Configurable interval.
-- supports daily energy and total energy
+- supports daily energy and total energy. Also minutely and hourly.
 
-![alt text](doc/chrome_cb3LCehaSM.png)
+![alt text](doc/chrome_ZRrCBzGClc.png)
 ![alt text](doc/chrome_kUslimc8P2.png)
 
-Example output:
+Example minute output (day and hour are similar):
+
+```json
+{
+    "date": "2024-10-06T06:03:00",
+    "L1": 2.1000000000931323,
+    "L2": 0.5,
+    "L3": 0.1000000000349246
+}
+```
+
+Example continuous output:
+
 ```json
 {
     "dayId": "202480",
